@@ -1,13 +1,14 @@
-fvwm (1:2.6.10-1) unstable; urgency=low
+fvwm (1:2.6.9-1) unstable; urgency=low
 
   * New upstream bugfix release.
   * Move the modules from /usr/lib/fvwm to /usr/libexec/fvwm
   * Move the locales to /usr/share/fvwm/locale to avoid conflict with fvwm3.
-  * Update standards version to 4.5.1.
+  * Updates to debian/copyright to list all copyright holders.
+  * Update standards version to 4.6.1.
   * Bump debhelper compat to 13.
-  * Various cleanup the debian/ build directory.
+  * Various cleanups to the debian/ build directory.
 
- -- Jaimos Skriletz <jaimosskriletz@gmail.com>  Mon, 31 May 2021 19:09:00 -0700
+ -- Jaimos Skriletz <jaimosskriletz@gmail.com>  Sat, 08 Oct 2022 11:00:00 -0600
 
 fvwm (1:2.6.8-1) unstable; urgency=low
 
