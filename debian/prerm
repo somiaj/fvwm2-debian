@@ -23,8 +23,8 @@ case "$1" in
         update-alternatives --remove FvwmCommand /usr/bin/Fvwm2Command
         update-alternatives --remove fvwm-root /usr/bin/fvwm2-root
         update-alternatives --remove fvwm-menu-desktop /usr/bin/fvwm2-menu-desktop
-        update-alterantives --remove fvwm-menu-directory /usr/bin/fvwm2-menu-directory
-        update-alterantives --remove fvwm-perllib /usr/bin/fvwm2-perllib
+        update-alternatives --remove fvwm-menu-directory /usr/bin/fvwm2-menu-directory
+        update-alternatives --remove fvwm-perllib /usr/bin/fvwm2-perllib
         update-alternatives --remove x-window-manager /usr/bin/fvwm2
     ;;
 
