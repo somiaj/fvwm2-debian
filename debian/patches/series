@@ -12,3 +12,4 @@ default-config-fvwm2.patch
 spelling-error-fixes.patch
 fix-acute-accent.patch
 default-config-updates.patch
+remove-FvwmCommand-helper-scripts.patch
