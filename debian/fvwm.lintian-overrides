@@ -7,5 +7,5 @@ fvwm binary: typo-in-manual-page Hilighting Highlighting [usr/share/man/man1/*]
 fvwm binary: typo-in-manual-page hilighting highlighting [usr/share/man/man1/*]
 fvwm binary: typo-in-manual-page hilighted highlighted [usr/share/man/man1/*]
 # fvwm module manual pages have been renamed to avoid confusion with fvwm3
-fvwm: spare-manual-page [usr/share/man/man1/Fvwm*.1.gz]
+fvwm: spare-manual-page [usr/share/man/man1/Fvwm2*.1.gz]
 

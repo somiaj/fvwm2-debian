@@ -7,3 +7,4 @@ menu-directory.patch
 fix-hardcoded-xterm.patch
 enable-more-mouse-buttons.patch
 move-locale-dir.patch
+default-config-fvwm2.patch

@@ -11,20 +11,23 @@ export DH_VERBOSE=1
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 
 override_dh_auto_configure:
-	dh_auto_configure -- --verbose --with-stroke-library --disable-imlibtest --with-imlib-prefix=/no/dir --with-readline-library=yes --enable-mandoc
+	dh_auto_configure -- --verbose --with-stroke-library --disable-imlibtest --with-imlib-prefix=/no/dir --with-readline-library=yes --enable-mandoc --program-transform-name='s/vwm/vwm2/'
 
 override_dh_install:
 	dh_install
-	# Do not conflict with update-alternatives.
-	cd $(CURDIR)/debian/fvwm/usr/bin && rm -f fvwm2 && mv fvwm fvwm2
+	# Remove unneeded link.
+	cd $(CURDIR)/debian/fvwm/usr/bin && rm -f fvwm22
 
 override_dh_installman:
 	dh_installman
-	# Do not conflict with update-alternatives.
-	cd $(CURDIR)/debian/fvwm/usr/share/man/man1 && mv fvwm.1 fvwm2.1
-
-#override_dh_installdocs:
-#	dh_installdocs -X.in -X.am -XMakefile
+	# Remove unneeded link.
+	cd $(CURDIR)/debian/fvwm/usr/share/man/man1 && rm -f fvwm22.1
+	# Rename Fvwm Module Manual pages
+	for module in Animate Auto Backer Banner Buttons ConsoleC.pl Console \
+	  Cpp Event Form IconMan Ident M4 Pager Perl Proxy Rearrange Script; \
+	do \
+	  cd $(CURDIR)/debian/fvwm/usr/share/man/man1 && mv Fvwm$$module.1 Fvwm2$$module.1; \
+	done
 
 override_dh_installchangelogs:
 	dh_installchangelogs NEWS

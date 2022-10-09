@@ -20,10 +20,31 @@ set -e
 
 case "$1" in
     configure)
+        # Setup alternatives to work with fvwm3
         update-alternatives \
             --install /usr/bin/fvwm fvwm /usr/bin/fvwm2 200 \
             --slave /usr/share/man/man1/fvwm.1.gz fvwm.1.gz \
                     /usr/share/man/man1/fvwm2.1.gz
+        update-alternatives \
+            --install /usr/bin/FvwmCommand FvwmCommand /usr/bin/Fvwm2Command 200 \
+            --slave /usr/share/man/man1/FvwmCommand.1.gz FvwmCommand.1.gz \
+                    /usr/share/man/man1/Fvwm2Command.1.gz
+        update-alternatives \
+            --install /usr/bin/fvwm-root fvwm-root /usr/bin/fvwm2-root 200 \
+            --slave /usr/share/man/man1/fvwm-root.1.gz fvwm-root.1.gz \
+                    /usr/share/man/man1/fvwm2-root.1.gz
+        update-alternatives \
+            --install /usr/bin/fvwm-menu-desktop fvwm-menu-desktop /usr/bin/fvwm2-menu-desktop 200 \
+            --slave /usr/share/man/man1/fvwm-menu-desktop.1.gz fvwm-menu-desktop.1.gz \
+                    /usr/share/man/man1/fvwm2-menu-desktop.1.gz
+        update-alternatives \
+            --install /usr/bin/fvwm-menu-directory fvwm-menu-directory /usr/bin/fvwm2-menu-directory 200 \
+            --slave /usr/share/man/man1/fvwm-menu-directory.1.gz fvwm-menu-directory.1.gz \
+                    /usr/share/man/man1/fvwm2-menu-directory.1.gz
+        update-alternatives \
+            --install /usr/bin/fvwm-perllib fvwm-perllib /usr/bin/fvwm2-perllib 200 \
+            --slave /usr/share/man/man1/fvwm-perllib.1.gz fvwm-perllib.1.gz \
+                    /usr/share/man/man1/fvwm2-perllib.1.gz
         # From debian-policy as of 2012-07-12, sec. 11.8.4.
         # Priority: 20 + 20 (support Debian menu system) + 40 (complies with
         # The Window Manager Specification Project) + 10 (defaults to
