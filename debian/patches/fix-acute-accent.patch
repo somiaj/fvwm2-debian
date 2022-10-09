@@ -1,0 +1,74 @@
+Description: Fix acute accents in manual pages.
+  Groff treats \' as an acute accent, and not an escaped quote.
+Author: Jaimos Skriletz <jaimosskriletz@gmail.com>
+Forwarded: https://github.com/fvwmorg/fvwm/commit/527ea3014f29eaeec4d13e0ac795852f8511b8e8
+Last-Update: 2022-10-08
+--- a/bin/fvwm-menu-desktop.1.in
++++ b/bin/fvwm-menu-desktop.1.in
+@@ -123,7 +123,7 @@ are included in the top level menu. \fIN
+ 
+ .IP "\fB\-\-regen\-cmd\fR \fICMD\fR "
+ This option sets the fvwm command \fICMD\fR that is run when the menu item
+-\'Regenerate' is selected. The default is "PipeRead `fvwm2-menu-desktop`".
++\&'Regenerate' is selected. The default is "PipeRead `fvwm2-menu-desktop`".
+ 
+ .IP "\fB\-\-term\-cmd\fR \fICMD\fR "
+ This option sets the terminal emulator command \fICMD\fR that is used to
+@@ -200,11 +200,11 @@ use this option to specify a different f
+ 
+ .IP "\fB\-\-app\-icon\fR \fINAME\fR"
+ Sets the default application icon if no others are found. Default is
+-\'gnome-applications'.
++\&'gnome-applications'.
+ 
+ .IP "\fB\-\-dir\-icon\fR \fINAME\fR"
+ Sets the default directory icon if no others are found. Default is
+-\'gnome-fs-directory'.
++\&'gnome-fs-directory'.
+ 
+ .SH USAGE
+ \fBfvwm2-menu-desktop\fR outputs XDG .menu files in the syntax of fvwm
+--- a/modules/FvwmButtons/FvwmButtons.1.in
++++ b/modules/FvwmButtons/FvwmButtons.1.in
+@@ -711,7 +711,7 @@ like this:
+ .sp
+ .fi
+ Any single character can be quoted with a preceding
+-backslash '\\'.
++backslash '\e'.
+ .RE
+ .\" End relative indent
+ .SH CREATING PANELS
+--- a/modules/FvwmCommand/FvwmCommand.1.in
++++ b/modules/FvwmCommand/FvwmCommand.1.in
+@@ -106,7 +106,7 @@ FvwmCommand -i 0 foobar
+ will return,
+ .EX
+ [fvwm][executeModule]: <<ERROR>> No such module
+-\'foobar\' in ModulePath '/usr/lib/X11/fvwm'
++\(aqfoobar\(aq in ModulePath '/usr/lib/X11/fvwm'
+ .EE
+ 
+ Note that Fvwm doesn't return any error messages in
+@@ -238,8 +238,8 @@ The below will iconify new windows when
+ .EX
+ Fvwm -mi3 | perl -ne '
+ $|=1;
+-print "windowid $1 iconify\\n" if /^(0x\\S+) add/;
+-\' > ~/\.FvwmCommandC
++print "windowid $1 iconify\\n" if /^(0x\\S+) add/;'
++\&' > ~/\.FvwmCommandC
+ .EE
+ .IP "\fI-r\fR"
+ Waits for a reply before it exits.
+--- a/modules/FvwmConsole/FvwmConsoleC.pl.1.in
++++ b/modules/FvwmConsole/FvwmConsoleC.pl.1.in
+@@ -165,7 +165,7 @@ string. Example:
+ Typing 'bigx<return>' in FvwmConsole will launch xterm. '^' denotes
+ the beginning of line in
+ .B regular expression.
+-\'pl\' in the middle
++\(aqpl\(aq in the middle
+ of the command will not be replaced. Although the format looks different,
+ it takes Perl regular expression.
+ It just uses single or double quote as the delimiter.

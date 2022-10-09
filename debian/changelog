@@ -10,6 +10,7 @@ fvwm (1:2.6.9-1) unstable; urgency=low
   * Fix debian/watch file.
   * Update debian/fvwm.lintian-overrides to match format changes.
   * Remove invalid tags from debian/upstream/metadata.
+  * Fix spelling errors and acute accents found by lintian.
   * Update standards version to 4.6.1.
   * Bump debhelper compat to 13.
   * Various cleanups to the debian/ build directory.
