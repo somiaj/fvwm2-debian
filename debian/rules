@@ -24,6 +24,8 @@ override_dh_installman:
 	dh_installman
 	# Remove unneeded link.
 	cd $(CURDIR)/debian/fvwm/usr/share/man/man1 && rm -f fvwm22.1
+	# Remove manual page for removed fvwm-bug script.
+	cd $(CURDIR)/debian/fvwm/usr/share/man/man1 && rm -rf fvwm2-bug.1
 	# Rename Fvwm Module Manual pages
 	for module in Animate Auto Backer Banner Buttons ConsoleC.pl Console \
 	  Cpp Event Form IconMan Ident M4 Pager Perl Proxy Rearrange Script; \
