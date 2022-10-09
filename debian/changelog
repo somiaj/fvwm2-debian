@@ -1,6 +1,7 @@
 fvwm (1:2.6.9-1) unstable; urgency=low
 
   * New upstream bugfix release.
+  * Apply upstream bugfix to FvwmIconMan.
   * Move the modules from /usr/lib/fvwm to /usr/libexec/fvwm
   * Move the locales to /usr/share/fvwm/locale to avoid conflict with fvwm3.
   * Rename fvwm-foo binaries to fvwm2-foo and FvwmFoo module

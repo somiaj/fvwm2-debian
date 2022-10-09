@@ -1,3 +1,4 @@
+fix-fvwm-iconman.patch
 pkgconfig.patch
 FvwmIconMan-fix-size-hints-warnings-2.patch
 manpage-ClickTime.patch
