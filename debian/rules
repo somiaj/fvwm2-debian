@@ -17,6 +17,8 @@ override_dh_install:
 	dh_install
 	# Remove unneeded link.
 	cd $(CURDIR)/debian/fvwm/usr/bin && rm -f fvwm22
+	# Remove old unused script.
+	cd $(CURDIR)/debian/fvwm/usr/bin && rm -f fvwm2-bug
 
 override_dh_installman:
 	dh_installman
