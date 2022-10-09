@@ -13,6 +13,7 @@ fvwm (1:2.6.9-1) unstable; urgency=low
   * Remove invalid tags from debian/upstream/metadata.
   * Remove fvwm-bug from debian package (unused bug reporting script).
   * Fix spelling errors and acute accents found by lintian.
+  * Add Vcs info to debian/control.
   * Update standards version to 4.6.1.
   * Bump debhelper compat to 13.
   * Various cleanups to the debian/ build directory.

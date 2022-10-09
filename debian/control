@@ -33,6 +33,8 @@ Build-Depends: debhelper (>= 13.0.0),
                xsltproc
 Standards-Version: 4.6.1
 Homepage: https://www.fvwm.org/
+Vcs-Browser: https://github.com/somiaj/fvwm2-debian
+Vcs-Git: https://github.com/somiaj/fvwm2-debian.git
 
 Package: fvwm
 Architecture: any
