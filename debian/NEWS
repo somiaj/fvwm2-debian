@@ -1,3 +1,22 @@
+fvwm (1:2.6.9-1) unstable; urgency=low
+
+    The Debian FVWM 2.6.x package has renamed the helper binaries
+    and manual pages to not be confused with FVWM3 binaries when
+    both fvwm and fvwm3 are installed. This includes fvwm2-config,
+    fvwm2-convert-2.6, fvwm2-menu-desktop, fvwm2-menu-directory,
+    fvwm2-menu-headlines, fvwm2-menu-xlock, fvwm2-perllib, and
+    fvwm2-root.
+
+    Alternatives have been added for commonly used fvwm helper
+    binaries that share names with fvwm3 helper binaries. This
+    includes fvwm-menu-desktop, fvwm-menu-directory, fvwm-perllib,
+    and fvwm-root.
+
+    FvwmModuleName manual pages have been renamed to Fvwm2ModuleName
+    to avoid confusion with fvwm3 modules. The module names are unchanged.
+
+ -- Jaimos Skriletz <jaimosskriletz@gmail.com>  Sat, 08 Oct 2022 22:00:00 -0600
+
 fvwm (1:2.6.7-1) unstable; urgency=low
 
     FVWM now comes with a default configuration. The default will load if
@@ -14,7 +33,7 @@ fvwm (1:2.6.7-1) unstable; urgency=low
     installed.
 
  -- Jaimos Skriletz <jaimosskriletz@gmail.com>  Wed, 16 Nov 2016 19:44:54 -0700
-    
+
 fvwm (1:2.6.5.ds-2) unstable; urgency=low
 
     FVWM package versions up to and including 2.5.30 used to include a default

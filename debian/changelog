@@ -7,6 +7,8 @@ fvwm (1:2.6.9-1) unstable; urgency=low
   * Rename fvwm-foo binaries to fvwm2-foo and FvwmFoo module
     manual pages to Fvwm2Foo to avoid confusion with fvwm3 and
     setup alternatives for fvwm-foo binaries to work with fvwm3.
+  * Add debian/NEWS burb to inform users of binary name changes
+    and the new alternatives.
   * Updates to debian/copyright to list all copyright holders.
   * Fix debian/watch file.
   * Update debian/fvwm.lintian-overrides to match format changes.
