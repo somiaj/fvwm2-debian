@@ -1,3 +1,10 @@
+fvwm (1:2.7.0-1) unstable; urgency=low
+
+  * New upstream bugfix release.
+  * Remove debian/patches applied upstream.
+
+ -- Jaimos Skriletz <jaimosskriletz@gmail.com>  Thu, 20 Oct 2022 11:00:00 -0600
+
 fvwm (1:2.6.9-1) unstable; urgency=low
 
   * New upstream bugfix release.

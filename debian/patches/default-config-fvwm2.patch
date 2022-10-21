@@ -76,8 +76,8 @@ Last-Update: 2022-10-08
  
  .IP "\fB\-\-regen\-cmd\fR \fICMD\fR "
  This option sets the fvwm command \fICMD\fR that is run when the menu item
--\'Regenerate' is selected. The default is "PipeRead `fvwm-menu-desktop`".
-+\'Regenerate' is selected. The default is "PipeRead `fvwm2-menu-desktop`".
+-\&'Regenerate' is selected. The default is "PipeRead `fvwm-menu-desktop`".
++\&'Regenerate' is selected. The default is "PipeRead `fvwm2-menu-desktop`".
  
  .IP "\fB\-\-term\-cmd\fR \fICMD\fR "
  This option sets the terminal emulator command \fICMD\fR that is used to
@@ -100,7 +100,7 @@ Last-Update: 2022-10-08
  use this option to specify a different folder.
  
 @@ -207,15 +207,15 @@ Sets the default directory icon if no ot
- \'gnome-fs-directory'.
+ \&'gnome-fs-directory'.
  
  .SH USAGE
 -\fBfvwm-menu-desktop\fR outputs XDG .menu files in the syntax of fvwm
@@ -322,18 +322,18 @@ Last-Update: 2022-10-08
      --dynamic                 used with dynamic menus.
 --- a/default-config/config
 +++ b/default-config/config
-@@ -56,8 +56,8 @@ InfoStoreAdd terminal x-terminal-emulato
- DestroyFunc StartFunction
- AddToFunc   StartFunction
- + I Test (Init, f $[FVWM_USERDIR]/.BGdefault) \
+@@ -64,8 +64,8 @@ AddToFunc   StartFunction
+ DestroyFunc InitBackground
+ AddToFunc InitBackground
+ + I Test (f $[FVWM_USERDIR]/.BGdefault) \
 -    Exec exec fvwm-root $[FVWM_USERDIR]/.BGdefault
 -+ I TestRc (NoMatch) Exec exec fvwm-root \
 +    Exec exec fvwm2-root $[FVWM_USERDIR]/.BGdefault
 ++ I TestRc (NoMatch) Exec exec fvwm2-root \
      $[FVWM_DATADIR]/default-config/images/background/bg1.png
- + I Test (Init) Module FvwmBanner
- + I Module FvwmButtons RightPanel
-@@ -98,12 +98,12 @@ AddToFunc   ViewManPage
+ 
+ # Mouse Bindings Functions
+@@ -103,12 +103,12 @@ AddToFunc   ViewManPage
  DestroyFunc SetBG
  AddToFunc   SetBG
  + I Test (f $[FVWM_USERDIR]/images/background/$0) \
@@ -348,7 +348,7 @@ Last-Update: 2022-10-08
  + I Exec exec ln -fs $[FVWM_DATADIR]/default-config/images/background/$0 \
      $[FVWM_USERDIR]/.BGdefault
  
-@@ -296,7 +296,7 @@ AddToMenu   MenuFvwmRoot "Fvwm" Title
+@@ -301,7 +301,7 @@ AddToMenu   MenuFvwmRoot "Fvwm" Title
  + "&Quit%icons/quit.png%" Module FvwmScript FvwmScript-ConfirmQuit
  
  # Generate XDGMenu
@@ -357,7 +357,7 @@ Last-Update: 2022-10-08
  
  # Programs Menu
  #
-@@ -404,30 +404,30 @@ AddToMenu   MenuSendToPage
+@@ -409,30 +409,30 @@ AddToMenu   MenuSendToPage
  # Fvwm Man Pages (Help) Menu
  DestroyMenu MenuFvwmManPages
  AddToMenu   MenuFvwmManPages "Help" Title

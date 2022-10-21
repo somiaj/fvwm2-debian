@@ -1,15 +1,3 @@
-fix-fvwm-iconman.patch
-pkgconfig.patch
-FvwmIconMan-fix-size-hints-warnings-2.patch
-manpage-ClickTime.patch
 fix-TabCom.patch
-reproducible-build.patch
-menu-directory.patch
 fix-hardcoded-xterm.patch
-enable-more-mouse-buttons.patch
-move-locale-dir.patch
 default-config-fvwm2.patch
-spelling-error-fixes.patch
-fix-acute-accent.patch
-default-config-updates.patch
-remove-FvwmCommand-helper-scripts.patch
