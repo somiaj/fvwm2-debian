@@ -1,3 +1,7 @@
+Description: Fix spelling error caught by lintian.
+Author: Jaimos Skriletz <jaimosskriletz@gmail.com>
+Forwarded: not-needed
+Last-Update: 2022-10-20
 --- a/doc/commands/Maximize.xml
 +++ b/doc/commands/Maximize.xml
 @@ -58,7 +58,7 @@ dimension of the window is set to
