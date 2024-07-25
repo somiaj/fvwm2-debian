@@ -1,5 +1,7 @@
 fvwm (1:2.7.0-3) unstable; urgency=medium
 
+  * Update standards to 4.7.0.
+    - Update comment for how x-window-manager priority is computed.
   * Update debian/copyright to state correct licesens.
 
  -- Jaimos Skriletz <jaimosskriletz@gmail.com>  Thu, 25 Jul 2024 11:07:17 -0600
