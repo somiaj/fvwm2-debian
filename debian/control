@@ -28,7 +28,7 @@ Build-Depends: debhelper (>= 13.0.0),
                libxrandr-dev,
                libxrender-dev,
                libxt-dev,
-               pkg-config,
+               pkgconf,
                sharutils,
                xsltproc
 Standards-Version: 4.7.0
@@ -38,7 +38,8 @@ Vcs-Git: https://github.com/somiaj/fvwm2-debian.git
 
 Package: fvwm
 Architecture: any
-Depends: libperl4-corelibs-perl | perl (<< 5.12.3-7),
+Depends: libperl4-corelibs-perl,
+         ${perl:Depends},
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: lxmenu-data | gnome-menus,
